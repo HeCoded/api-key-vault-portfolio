@@ -1,0 +1,70 @@
+/* Base Styles */
+body {
+    font-family: 'Inter', sans-serif;
+    color: #e0e0e0;
+    background: linear-gradient(-45deg, #0f0c29, #302b63, #24243e, #1c1c3c);
+    background-size: 400% 400%;
+    animation: gradientBGPage 30s ease infinite;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+@keyframes gradientBGPage {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+#particles-js-portfolio {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+/* Typography */
+.font-exo2 {
+    font-family: 'Exo 2', sans-serif;
+}
+
+/* Portfolio Section Styling */
+.portfolio-section-card {
+    background-color: rgba(25, 28, 54, 0.7);
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(74, 74, 106, 0.6);
+    border-radius: 1rem;
+    padding: 1.5rem 2rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+}
+
+.portfolio-section-card h3 {
+    font-family: 'Exo 2', sans-serif;
+    font-size: 1.75rem;
+    font-weight: 600;
+    color: #c0c0ff;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid rgba(127, 90, 240, 0.3);
+}
+
+/* ... (rest of your CSS) ... */
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .portfolio-container {
+        padding: 1rem;
+    }
+    
+    .portfolio-section-card {
+        padding: 1rem;
+    }
+}
+
+/* Scrollbar Styling */
+::-webkit-scrollbar { width: 10px; }
+::-webkit-scrollbar-track { background: rgba(30, 30, 48, 0.5); border-radius: 10px; }
+::-webkit-scrollbar-thumb { background: #5a5a7a; border-radius: 10px; }
+::-webkit-scrollbar-thumb:hover { background: #7f5af0; }
