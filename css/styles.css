@@ -31,13 +31,20 @@ body {
 
 /* Portfolio Section Styling */
 .portfolio-section-card {
-    background-color: rgba(25, 28, 54, 0.7);
+    background-color: rgba(25, 28, 54, 0.85);
     backdrop-filter: blur(8px);
     border: 1px solid rgba(74, 74, 106, 0.6);
     border-radius: 1rem;
-    padding: 1.5rem 2rem;
-    margin-bottom: 2rem;
-    box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+    padding: 2rem 2.5rem;
+    margin: 0 auto 2.5rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    max-width: 900px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.portfolio-section-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.25);
 }
 
 .portfolio-section-card h3 {
@@ -45,22 +52,165 @@ body {
     font-size: 1.75rem;
     font-weight: 600;
     color: #c0c0ff;
-    margin-bottom: 1rem;
-    padding-bottom: 0.5rem;
+    margin: 0 0 1.25rem 0;
+    padding-bottom: 0.75rem;
     border-bottom: 1px solid rgba(127, 90, 240, 0.3);
+    letter-spacing: -0.5px;
+    line-height: 1.3;
 }
 
 /* ... (rest of your CSS) ... */
 
+/* Typography and Spacing */
+.portfolio-container {
+    line-height: 1.7;
+}
+
+.portfolio-container p,
+.portfolio-container ul,
+.portfolio-container ol {
+    margin-bottom: 1.25rem;
+    color: #e0e0e0;
+}
+
+.portfolio-container ul,
+.portfolio-container ol {
+    padding-left: 1.5rem;
+}
+
+.portfolio-container li {
+    margin-bottom: 0.5rem;
+    position: relative;
+    padding-left: 0.5rem;
+}
+
+.portfolio-container li:before {
+    content: '•';
+    color: #7f5af0;
+    position: absolute;
+    left: -1rem;
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
     .portfolio-container {
-        padding: 1rem;
+        padding: 1.5rem;
     }
     
     .portfolio-section-card {
-        padding: 1rem;
+        padding: 1.5rem;
+        margin-bottom: 2rem;
     }
+    
+    .portfolio-section-card h3 {
+        font-size: 1.5rem;
+    }
+}
+
+/* App Header Styling */
+#appHeader {
+    position: relative;
+    padding: 3rem 1rem 2rem;
+    background: linear-gradient(120deg, rgba(30, 30, 48, 0.9), rgba(44, 44, 68, 0.95), rgba(50, 40, 78, 0.9));
+    background-size: 300% 300%;
+    animation: headerGradientAnimApp 20s ease infinite alternate;
+    box-shadow: 0 0 25px 5px rgba(127, 90, 240, 0.1);
+    border: 1px solid rgba(127, 90, 240, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 180px;
+}
+
+#headerTextContent {
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+#appHeader h1 {
+    font-family: 'Exo 2', sans-serif;
+    font-weight: 800;
+    font-size: 2.5rem;
+    line-height: 1.2;
+    letter-spacing: -0.5px;
+    margin: 0 0 1rem 0;
+    text-align: center;
+    width: 100%;
+    color: #fff;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+#appHeader p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.9);
+    margin: 0.5rem 0 0 0;
+    max-width: 700px;
+    text-align: center;
+    font-weight: 400;
+}
+
+@keyframes headerGradientAnimApp {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Adjust app content spacing */
+#appContent {
+    padding: 2rem 2.5rem;
+}
+
+/* Card content styling */
+.card {
+    background: rgba(30, 30, 48, 0.6);
+    border-radius: 12px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    border: 1px solid rgba(127, 90, 240, 0.2);
+}
+
+.card h2 {
+    color: #c0c0ff;
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.75rem;
+    border-bottom: 1px solid rgba(127, 90, 240, 0.3);
+    text-align: center;
+}
+
+/* Ensure consistent spacing in the app container */
+.app-embed-container {
+    margin: 2rem auto;
+    border-radius: 1rem;
+    overflow: hidden;
+}
+
+/* Section spacing */
+section {
+    margin: 3rem 0;
+    padding: 0 1rem;
+}
+
+/* Project intro section */
+#project-intro {
+    padding: 4rem 0;
+}
+
+/* Project analysis section */
+#project-analysis {
+    padding: 2rem 0;
+}
+
+/* Project conclusion section */
+#project-conclusion {
+    padding: 3rem 0 5rem;
 }
 
 /* Scrollbar Styling */
